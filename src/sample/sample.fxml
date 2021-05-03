@@ -34,7 +34,7 @@
                               <Image url="@../../Images/Angular%20DIsplacement.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="203.0" layoutY="196.0" prefHeight="188.0" prefWidth="212.0" scaleX="2.0" scaleY="2.0" text="Angular displacement is defined as θ.   It is the degrees or radians travelled  regardless of the distance covered  when doing so.                                  - On the right hand side, each coloured  line has the same angular dispacement (θ), yet they have different  displacements (d, s, x).                      - Displacement is the final position relative to the initial position." wrapText="true" />
+                        <Label layoutX="203.0" layoutY="196.0" prefHeight="188.0" prefWidth="212.0" scaleX="2.0" scaleY="2.0" text="Angular displacement is defined as θ.   It is the degrees or radians travelled  regardless of the distance covered  when doing so.                                  - On the right hand side, each coloured  line has the same angular displacement (θ), yet they have different  displacements (d, s, x).                      - Displacement is the final position relative to the initial position." wrapText="true" />
                      </children>
                   </AnchorPane>
                </content>
