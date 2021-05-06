@@ -2,13 +2,15 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.image.Image?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1634.0" prefWidth="1136.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane alignment="center" hgap="10" prefHeight="710.0" prefWidth="1100.0" vgap="10" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <AnchorPane fx:id="mainMenu" maxHeight="710.0" maxWidth="1100.0" minHeight="710.0" minWidth="1100.0" prefHeight="710.0" prefWidth="1100.0" visible="false">
          <children>
@@ -20,27 +22,28 @@
             <Label layoutX="469.0" layoutY="225.0" scaleX="3.0" scaleY="3.0" text="Choose one option to get started:" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="cmWindow" prefHeight="2000.0" prefWidth="1136.0">
+      <AnchorPane fx:id="explanationPane" prefHeight="710.0" prefWidth="1100.0">
          <children>
-            <Label layoutX="509.0" layoutY="64.0" scaleX="4.0" scaleY="4.0" text="Circular Motion" />
-            <Button layoutX="27.0" layoutY="26.0" mnemonicParsing="false" scaleX="2.0" scaleY="2.0" text="&lt;" />
-            <ScrollPane fx:id="CMScrollPane" layoutY="199.0" prefHeight="1926.0" prefWidth="1136.0">
-               <content>
-                  <AnchorPane fx:id="AnchorPane" prefHeight="2000.0" prefWidth="1135.0">
-                     <children>
-                        <Label layoutX="214.0" layoutY="57.0" scaleX="3.0" scaleY="3.0" text="Angular Displacement" />
-                        <ImageView fitHeight="412.0" fitWidth="412.0" layoutX="594.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../Images/Angular%20DIsplacement.png" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="203.0" layoutY="196.0" prefHeight="188.0" prefWidth="212.0" scaleX="2.0" scaleY="2.0" text="Angular displacement is defined as θ.   It is the degrees or radians travelled  regardless of the distance covered  when doing so.                                  - On the right hand side, each coloured  line has the same angular displacement (θ), yet they have different  displacements (d, s, x).                      - Displacement is the final position relative to the initial position." wrapText="true" />
-                     </children>
-                  </AnchorPane>
-               </content>
-            </ScrollPane>
+            <Label fx:id="ExplanationTitle" layoutX="509.0" layoutY="64.0" scaleX="4.0" scaleY="4.0" text="Circular Motion" />
+            <Button layoutX="27.0" layoutY="26.0" mnemonicParsing="false" onAction="#ReturnToMenu" scaleX="2.0" scaleY="2.0" text="&lt;" />
+            <ImageView fx:id="explanationImage" fitHeight="412.0" fitWidth="412.0" layoutX="615.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+              
+            </ImageView>
+            <TextArea fx:id="explanationTextArea" layoutX="51.0" layoutY="136.0" prefHeight="498.0" prefWidth="515.0" text="Angular Displacement&#10;&#10;Angular displacement is defined as θ.  &#10;- It is the degrees or radians travelled  regardless of the distance covered  when doing so.                                 &#10; - On the right hand side, each coloured  line has the same angular displacement (θ), yet they have different  displacements (d, s, x).                     &#10; - Displacement is the final position relative to the initial position." wrapText="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextArea>
+            <Label fx:id="Imagelbl" layoutX="806.0" layoutY="570.0" text="Image A" />
+            <Button layoutX="762.0" layoutY="566.0" mnemonicParsing="false" onAction="#prevImageBtn" text="&lt;" />
+            <Button layoutX="862.0" layoutY="566.0" mnemonicParsing="false" onAction="#nextImageBtn" text="&gt;" />
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" visible="false" />
    </children>
-</AnchorPane>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+</GridPane>
