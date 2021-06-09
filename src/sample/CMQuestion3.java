@@ -2,18 +2,9 @@ package sample;
 
 import java.util.Random;
 
-public class CMQuestion3 {
+public class CMQuestion3 extends QuestionType{
     private int value1;
     private int value2;
-    private double ans;
-    private double Option1;
-    private double Option2;
-    private double Option3;
-
-    String Question;
-
-    private double studentAns;
-    private boolean correctOrWrong;
 
     Random rnd = new Random();
     public CMQuestion3() {
@@ -39,18 +30,6 @@ public class CMQuestion3 {
         }
         Question = "3) A car goes around a circular road with a radius of " + value1 + " metres. You’ve been informed that the coefficient of friction between the tires of the car and the road is " + doubleValue2 + ". On that account, what is the maximum speed at which the car can follow the circular path without drifting away from the circular path?";
 
-
-    }
-
-    public String getQuestion() {return Question;}
-    public double getAns() {return ans;}
-    public void setStudentAns(double studentAns) {
-        this.studentAns = studentAns;
-        if (studentAns == ans){
-            correctOrWrong=true;
-        }else{
-            correctOrWrong=false;
-        }
     }
 
 }

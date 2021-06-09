@@ -6,22 +6,35 @@ public class CMTest {
 
    //Creates the entire 10 questions for the quiz.
 
-    CMQuestion1 q1 = new CMQuestion1();
-    CMQuestion2 q2 = new CMQuestion2();
-    CMQuestion3 q3 = new CMQuestion3();
-    CMQuestion4 q4 = new CMQuestion4();
-    CMQuestion5 q5 = new CMQuestion5();
-    PMQuestion6 q6 = new PMQuestion6();
-    PMQuestion7 q7 = new PMQuestion7();
-    PMQuestion8 q8 = new PMQuestion8();
-    PMQuestion9 q9 = new PMQuestion9();
-    PMQuestion10 q10 = new PMQuestion10();
+   // CMQuestion1 q1 = new CMQuestion1();
+    //CMQuestion2 q2 = new CMQuestion2();
+    //CMQuestion3 q3 = new CMQuestion3();
+   // CMQuestion4 q4 = new CMQuestion4();
+    //CMQuestion5 q5 = new CMQuestion5();
+   // PMQuestion6 q6 = new PMQuestion6();
+   // PMQuestion7 q7 = new PMQuestion7();
+   // PMQuestion8 q8 = new PMQuestion8();
+   // PMQuestion9 q9 = new PMQuestion9();
+   // PMQuestion10 q10 = new PMQuestion10();
+
+    ArrayList<QuestionType> questions = new ArrayList<QuestionType>();
+
 
     public CMTest(){
 
+        questions.add( new CMQuestion1());
+        questions.add( new CMQuestion2());
+        questions.add(new CMQuestion3());
+        questions.add( new CMQuestion4());
+        questions.add( new CMQuestion5());
+        questions.add( new PMQuestion6());
+        questions.add( new PMQuestion7());
+        questions.add( new PMQuestion8());
+        questions.add( new PMQuestion9());
+        questions.add(new PMQuestion10());
     }
 
-
+/*
     //Methods to get the information from each of the questions.
     public CMQuestion1 getQ1() {
         return q1;
@@ -53,5 +66,7 @@ public class CMTest {
     public PMQuestion10 getQ10() {
         return q10;
     }
+
+ */
 
 }

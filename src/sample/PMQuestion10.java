@@ -2,20 +2,12 @@ package sample;
 
 import java.util.Random;
 
-public class PMQuestion10 {
+public class PMQuestion10 extends QuestionType {
     private int value1;
     private int value2;
     private int value3;
     private int value4;
-    private double ans;
-    private double Option1;
-    private double Option2;
-    private double Option3;
 
-    String Question;
-
-    private double studentAns;
-    private boolean correctOrWrong;
 
     Random rnd = new Random();
     public PMQuestion10() {
@@ -61,14 +53,5 @@ public class PMQuestion10 {
         Question = "10) Two moons orbiting the same planet are " + finalValue1 + " metres apart. After the planet makes a full rotation on its axis, the moons are " + finalValue2 + " metres away from each other. One of the moons weighs " + finalValue3 + " kg and the other " + finalValue4 + " kg. What is the change in gravitational potential energy of the two moon system?";
 
     }
-    public String getQuestion() {return Question;}
-    public double getAns() {return ans;}
-    public void setStudentAns(double studentAns) {
-        this.studentAns = studentAns;
-        if (studentAns == ans){
-            correctOrWrong=true;
-        }else{
-            correctOrWrong=false;
-        }
-    }
+
 }

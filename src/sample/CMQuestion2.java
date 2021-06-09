@@ -2,21 +2,12 @@ package sample;
 
 import java.util.Random;
 
-public class CMQuestion2 {
+public class CMQuestion2 extends QuestionType {
 
     private int value1;
     private int value2;
     private int value3;
     private int value4;
-    private double ans;
-    private double Option1;
-    private double Option2;
-    private double Option3;
-
-    String Question;
-
-    private double studentAns;
-    private boolean correctOrWrong;
 
     Random rnd = new Random();
 
@@ -95,14 +86,4 @@ public class CMQuestion2 {
         }//end of else
     }
 
-    public String getQuestion() {return Question;}
-    public double getAns() {return ans;}
-    public void setStudentAns(double studentAns) {
-        this.studentAns = studentAns;
-        if (studentAns == ans){
-            correctOrWrong=true;
-        }else{
-            correctOrWrong=false;
-        }
-    }
 }
