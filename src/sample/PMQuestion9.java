@@ -1,5 +1,6 @@
 package sample;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class PMQuestion9 extends QuestionType {
@@ -29,10 +30,15 @@ public class PMQuestion9 extends QuestionType {
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
             Question = "9) A planet has a gravitational potential of " + finalValue1 + " J/kg. Using this information, find the escape velocity for the planet.";
 
@@ -63,10 +69,15 @@ public class PMQuestion9 extends QuestionType {
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
             Question = "9) A planet has a gravitational acceleration of " + doubleValue1 + " m/s2 and a radius of " + finalValue2 + " metres. What is the escape velocity for the planet?";
 
@@ -97,10 +108,15 @@ public class PMQuestion9 extends QuestionType {
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
             Question = "9) A planet has a total mass of " + finalValue1 + " kg and a radius of " + finalValue2 + " metres. What is the escape velocity on this planet?";
 

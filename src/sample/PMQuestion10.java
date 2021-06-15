@@ -1,5 +1,6 @@
 package sample;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class PMQuestion10 extends QuestionType {
@@ -7,7 +8,6 @@ public class PMQuestion10 extends QuestionType {
     private int value2;
     private int value3;
     private int value4;
-
 
     Random rnd = new Random();
     public PMQuestion10() {
@@ -45,10 +45,15 @@ public class PMQuestion10 extends QuestionType {
         Option1 = 0;
         Option2 = 0;
         Option3 = 0;
-        while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-            Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-            Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-            Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+        DecimalFormat formatter = new DecimalFormat("#0.0");
+        while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+        {
+            Option1 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+            Option1 = Double.parseDouble(formatter.format(Option1));
+            Option2 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+            Option2 = Double.parseDouble(formatter.format(Option2));
+            Option3 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+            Option3 = Double.parseDouble(formatter.format(Option3));
         }
         Question = "10) Two moons orbiting the same planet are " + finalValue1 + " metres apart. After the planet makes a full rotation on its axis, the moons are " + finalValue2 + " metres away from each other. One of the moons weighs " + finalValue3 + " kg and the other " + finalValue4 + " kg. What is the change in gravitational potential energy of the two moon system?";
 

@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -104,7 +105,7 @@ public class Controller {
         order.add(checkBx4);
 
 
-        //setUpQuestion();
+        setUpQuestion();
 
     }
 
@@ -214,6 +215,12 @@ public class Controller {
             }
         }else{
             //alert the user to make a choice
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("");
+            alert.setHeaderText("No Answer Selected");
+            alert.setContentText("An answer must selected to proceed");
+
+            alert.showAndWait();
         }
 
 

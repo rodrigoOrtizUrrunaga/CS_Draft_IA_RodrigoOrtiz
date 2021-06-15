@@ -1,5 +1,6 @@
 package sample;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class CMQuestion2 extends QuestionType {
@@ -50,10 +51,15 @@ public class CMQuestion2 extends QuestionType {
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = ans + (-9 + rnd.nextInt(19) / 10);
-                Option2 = ans + (-9 + rnd.nextInt(19) / 10);
-                Option3 = ans + (-9 + rnd.nextInt(19) / 10);
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
 
             Question = "2) A ball that weighs " + value1 + " kg follows the path of a vertical circle of " + doubleValue2 + " metres in radius as it is attached to a rope and is moving at " + value3 + " m/s. What is the tension force in the rope that allows the ball to follow a circular path when the ball is at the " + option2a + " of the loop?";
@@ -77,10 +83,15 @@ public class CMQuestion2 extends QuestionType {
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = ans + (-9 + rnd.nextInt(19) / 10);
-                Option2 = ans + (-9 + rnd.nextInt(19) / 10);
-                Option3 = ans + (-9 + rnd.nextInt(19) / 10);
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
             Question = "2) A tetherball that weighs " + doubleValue1 + " kg is attached to a pole and a string of length " + doubleValue2 + " centimetres. It makes " + value3 + " revolutions every " + value4 + " seconds. What is the tension force in the rope that allows the ball to follow a circular path?";
         }//end of else

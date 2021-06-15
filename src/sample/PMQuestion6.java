@@ -1,5 +1,6 @@
 package sample;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class PMQuestion6 extends QuestionType{
@@ -43,10 +44,15 @@ public class PMQuestion6 extends QuestionType{
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
             Question = "6) Planet A has a mass of " + value1 + " and Planet B has a mass of " + value2 + ". The force of gravity between the two planets is " + value3 + " N. With this in mind, what is the distance between these two planets? Remember that for one to calculate this the planets must be considered point masses.";
         }
@@ -81,10 +87,15 @@ public class PMQuestion6 extends QuestionType{
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
             Question = "6) Planet A has a mass of " + finalValue1 + " kg and Planet B has a mass of " + finalValue2 + " kg. The distance between these two planets is " + finalValue3 + " metres. With this in mind, what is the gravitational force between these two planets? Remember that for one to calculate this the planets must be considered point masses.";
 
@@ -120,11 +131,18 @@ public class PMQuestion6 extends QuestionType{
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
+
             Question = "6) Planet A has a mass of " + finalValue1 + ". The distance between Planet A and Planet B is " + finalValue2 + " metres and the force of gravity between them is " + finalValue3 + " N. What is the mass of Planet B? Remember that for one to calculate this the planets must be considered point masses.";
 
         }

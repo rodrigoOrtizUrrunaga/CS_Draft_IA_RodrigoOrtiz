@@ -1,4 +1,5 @@
 package sample;
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class CMQuestion1 extends QuestionType {
@@ -26,14 +27,22 @@ public class CMQuestion1 extends QuestionType {
             double force2 = force * 10;
             double round = (double) Math.round(force2);
             ans = round / 10;
-            Option1 = 0;
-            Option2 = 0;
-            Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = ans + (-9 + rnd.nextInt(19) / 10);
-                Option2 = ans + (-9 + rnd.nextInt(19) / 10);
-                Option3 = ans + (-9 + rnd.nextInt(19) / 10);
+            Option1 = 0.0;
+            Option2 = 0.0;
+            Option3 = 0.0;
+
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
+
+
             Question = "1) A ball that weighs " + value1 + " kg and is moving in a circular path makes " + value2 + " revolutions every " + value3 + " seconds. The distance between the center and the circumference of the circle drawn by the ball’s path is " + value4 + " metres. What is the centripetal force of the ball?";
 
         } else {
@@ -53,10 +62,15 @@ public class CMQuestion1 extends QuestionType {
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = ans + (-9 + rnd.nextInt(19) / 10);
-                Option2 = ans + (-9 + rnd.nextInt(19) / 10);
-                Option3 = ans + (-9 + rnd.nextInt(19) / 10);
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
             Question = "1) A car accelerates uniformly from " + value1 + " m/s in " + value2 + " seconds from rest on a circular track. The radius of the track is " + value3 + " meters. What is the net acceleration of the car? Hint: net refers to the sum of the components of acceleration, these being the tangential and the centripetal acceleration.";
         }//end of else

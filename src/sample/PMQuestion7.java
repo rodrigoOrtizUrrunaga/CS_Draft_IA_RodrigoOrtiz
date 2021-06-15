@@ -54,9 +54,9 @@ public class PMQuestion7 extends QuestionType {
             Option2 = 0;
             Option3 = 0;
             while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+                Option1 = (f + ((-9 + rnd.nextInt(19))+((-9 + rnd.nextInt(19)) / 10)))* Math.pow(10, b);
+                Option2 = (f + ((-9 + rnd.nextInt(19))+((-9 + rnd.nextInt(19)) / 10)))* Math.pow(10, b);
+                Option3 = (f + ((-9 + rnd.nextInt(19))+((-9 + rnd.nextInt(19)) / 10)))* Math.pow(10, b);
             }
             Question = "7) Moon X orbits Planet Y which it in turn orbits Star Z. They weigh " + finalValue1 + " kg, " + finalValue2 + " kg and " + finalValue3 + " kg respectively. When Moon X is between Planet Y and Star Z, the distance between Moon X and Planet Y is " + finalValue4 + " metres and the distance between Moon X and Star Z is " + finalValue5 + " metres. What is the magnitude of the net gravitational force exerted on Moon X ? Hint: forces are vector quantities.";
 
@@ -105,9 +105,9 @@ public class PMQuestion7 extends QuestionType {
             Option2 = 0;
             Option3 = 0;
             while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+                Option1 = (f + ((-9 + rnd.nextInt(19))+((-9 + rnd.nextInt(19)) / 10)))* Math.pow(10, b);
+                Option2 = (f + ((-9 + rnd.nextInt(19))+((-9 + rnd.nextInt(19)) / 10)))* Math.pow(10, b);
+                Option3 = (f + ((-9 + rnd.nextInt(19))+((-9 + rnd.nextInt(19)) / 10)))* Math.pow(10, b);
             }
             Question = "7) Moon X orbits Planet Y which it in turn orbits Star Z. They weigh " + finalValue1 + " kg, " + finalValue2 + " kg and " + finalValue3 + " kg respectively. When the gravitational force between Moon X and Planet Y is perpendicular to the gravitational force between Moon X and Star Z, the distance between Moon X and Planet Y is " + finalValue4 + " metres and the distance between Moon X and Star Z is " + finalValue5 + " metres. What is the magnitude of the net gravitational force exerted on Moon X when these are perpendicular to each other? Hint: forces are vector quantities.";
 

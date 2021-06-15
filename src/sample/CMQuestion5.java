@@ -1,5 +1,6 @@
 package sample;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class CMQuestion5 extends QuestionType {
@@ -22,10 +23,15 @@ public class CMQuestion5 extends QuestionType {
         Option1 = 0;
         Option2 = 0;
         Option3 = 0;
-        while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-            Option1 = ans + (-9 + rnd.nextInt(19) / 10);
-            Option2 = ans + (-9 + rnd.nextInt(19) / 10);
-            Option3 = ans + (-9 + rnd.nextInt(19) / 10);
+        DecimalFormat formatter = new DecimalFormat("#0.0");
+        while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+        {
+            Option1 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+            Option1 = Double.parseDouble(formatter.format(Option1));
+            Option2 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+            Option2 = Double.parseDouble(formatter.format(Option2));
+            Option3 = ans + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10));
+            Option3 = Double.parseDouble(formatter.format(Option3));
         }
         Question = "5) A car goes around a circular road that has a radius of " + value1 + " metres at a speed of " + value2 + " m/s. What angle (in radians) of banking of the road would allow the car to follow the circular path with no friction required? Hint: friction acts as the centripetal force, thus another force which points at the center is key to the solution.";
 

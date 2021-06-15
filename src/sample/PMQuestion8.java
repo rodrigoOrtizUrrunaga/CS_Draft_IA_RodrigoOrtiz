@@ -1,5 +1,6 @@
 package sample;
 
+import java.text.DecimalFormat;
 import java.util.Random;
 
 public class PMQuestion8 extends QuestionType {
@@ -39,10 +40,15 @@ public class PMQuestion8 extends QuestionType {
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
             Question = "8) Satellite X is moving in a circular orbit around Planet Y at a height of " + value1 + " metres above the surface of the planet. The mass of Planet Y is " + finalValue2 + " kg and its radius is " + finalValue3 + " metres. What is the period in seconds of Satellite X as it orbits Planet Y?";
 
@@ -87,10 +93,15 @@ public class PMQuestion8 extends QuestionType {
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
             Question = "8) Satellite X is geosynchronous to Planet Y. Said planet makes a turn on its axis every " + value1 + " hours, weighs " + finalValue2 + " kg and has a radius of " + finalValue3 + " metres. What is the " + option8b + " of the satellite above the surface of Planet Y?";
         }
@@ -121,10 +132,15 @@ public class PMQuestion8 extends QuestionType {
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
             Question = "8) Star A and Planet B are " + finalValue1 + " metres apart whereas Star A and Planet C are " + finalValue2 + " metres away from each other. If it takes " + value3 + " Earth days for Planet B to orbit Star A, how many Earth days does Planet C take to orbit Star A?";
 
@@ -153,10 +169,15 @@ public class PMQuestion8 extends QuestionType {
             Option1 = 0;
             Option2 = 0;
             Option3 = 0;
-            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans) {
-                Option1 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option2 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
-                Option3 = (f + (-9 + rnd.nextInt(19) / 10)) * Math.pow(10, b);
+            DecimalFormat formatter = new DecimalFormat("#0.0");
+            while (Option1==Option2||Option2==Option3||Option3==Option1||Option1==ans||Option2==ans||Option3==ans)
+            {
+                Option1 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option1 = Double.parseDouble(formatter.format(Option1));
+                Option2 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option2 = Double.parseDouble(formatter.format(Option2));
+                Option3 = (f + ((-9 + (rnd.nextDouble()*19))+((-9 + (rnd.nextDouble()*19)) / 10)))* Math.pow(10, b);
+                Option3 = Double.parseDouble(formatter.format(Option3));
             }
             Question = "8) Star A and Planet B are " + finalValue1 + " metres apart. It takes " + value2 + " Earth days for Planet B to orbit Star A and " + value3 + " Earth days for Planet C to orbit Star A. With this in mind, how far apart is Planet C from Star A?";
 
