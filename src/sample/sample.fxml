@@ -51,6 +51,7 @@
             <Button layoutX="877.0" layoutY="636.0" mnemonicParsing="false" onAction="#nextQuestionBtn" text="check answer / next question" />
          </children>
       </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
    </children>
    <columnConstraints>
       <ColumnConstraints />

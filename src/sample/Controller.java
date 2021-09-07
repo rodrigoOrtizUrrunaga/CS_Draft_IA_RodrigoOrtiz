@@ -97,7 +97,7 @@ public class Controller {
 
         mainMenu.setVisible(false);
         explanationPane.setVisible(false);
-        quizPane.setVisible(false);
+        quizPane.setVisible(true);
 
         order.add(checkBx1);
         order.add(checkBx2);
@@ -187,16 +187,17 @@ public class Controller {
         checkBx4.setSelected(true);
     }
 
+    //This is used to randomize the order at which the options and answer are organized when taking the test to prevent students from correctly guessing from memory instead of working out the answer.
     public void setUpQuestion(){
 
         Collections.shuffle(order);
-        order.get(0).setText(Double.toString(CMTests.get(CMTests.size()).questions.get(currentQuestionCounter).getAns()));
-        order.get(1).setText(Double.toString(CMTests.get(CMTests.size()).questions.get(currentQuestionCounter).getOption1()));
-        order.get(2).setText(Double.toString(CMTests.get(CMTests.size()).questions.get(currentQuestionCounter).getOption2()));
-        order.get(3).setText(Double.toString(CMTests.get(CMTests.size()).questions.get(currentQuestionCounter).getOption3()));
+        order.get(0).setText(Double.toString(CMTests.get(CMTests.size()-1).questions.get(currentQuestionCounter).getAns()));
+        order.get(1).setText(Double.toString(CMTests.get(CMTests.size()-1).questions.get(currentQuestionCounter).getOption1()));
+        order.get(2).setText(Double.toString(CMTests.get(CMTests.size()-1).questions.get(currentQuestionCounter).getOption2()));
+        order.get(3).setText(Double.toString(CMTests.get(CMTests.size()-1).questions.get(currentQuestionCounter).getOption3()));
 
 
-        quizTextArea.setText(CMTests.get(CMTests.size()).questions.get(currentQuestionCounter).getQuestion());
+        quizTextArea.setText(CMTests.get(CMTests.size()-1).questions.get(currentQuestionCounter).getQuestion());
 
 
     }
@@ -208,7 +209,7 @@ public class Controller {
             for (CheckBox c: order) {
                 //if checked
                 if (c.isSelected()) {
-                    CMTests.get(CMTests.size()).questions.get(0).setStudentAns(Double.parseDouble(c.getText()));//check this parses correctly...
+                    CMTests.get(CMTests.size()-1).questions.get(0).setStudentAns(Double.parseDouble(c.getText()));//check this parses correctly...
                     currentQuestionCounter++;
                     setUpQuestion();
                 }
