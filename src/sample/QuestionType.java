@@ -8,8 +8,8 @@ abstract class QuestionType { //abstract because this class will never be initia
      double Option3;
 
     private double studentAns;
-    private boolean correctOrWrong;
-
+    public boolean correctOrWrong;
+    public int score = 0;
 
     public String getQuestion() {return Question;}
     public double getAns() {return ans;}
@@ -21,6 +21,7 @@ abstract class QuestionType { //abstract because this class will never be initia
         this.studentAns = studentAns;
         if (studentAns == ans){
             correctOrWrong=true;
+            score = score + 1;
         }else{
             correctOrWrong=false;
         }

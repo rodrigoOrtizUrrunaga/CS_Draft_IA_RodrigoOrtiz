@@ -30,7 +30,7 @@
             <ImageView fx:id="explanationImage" fitHeight="412.0" fitWidth="412.0" layoutX="615.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
               
             </ImageView>
-            <TextArea fx:id="explanationTextArea" layoutX="51.0" layoutY="136.0" prefHeight="498.0" prefWidth="515.0" text="Angular Displacement&#10;&#10;Angular displacement is defined as θ.  &#10;- It is the degrees or radians travelled  regardless of the distance covered  when doing so.                                 &#10; - On the right hand side, each coloured  line has the same angular displacement (θ), yet they have different  displacements (d, s, x).                     &#10; - Displacement is the final position relative to the initial position." wrapText="true">
+            <TextArea fx:id="explanationTextArea" layoutX="51.0" layoutY="136.0" prefHeight="498.0" prefWidth="515.0" text="&#10;&#10;" wrapText="true">
                <font>
                   <Font size="17.0" />
                </font>
@@ -51,7 +51,7 @@
             <Button layoutX="877.0" layoutY="636.0" mnemonicParsing="false" onAction="#nextQuestionBtn" text="check answer / next question" />
          </children>
       </AnchorPane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+
    </children>
    <columnConstraints>
       <ColumnConstraints />
